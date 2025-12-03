@@ -1,23 +1,33 @@
-/* overide */
-/* Remove the big white sheet behind everything */
+/* =========================================================
+   GLOBAL OVERRIDES & FIXES
+   ========================================================= */
+
+/* Remove white background in #main */
 #main {
     background-color: transparent !important;
 }
 
+/* Hide chatbot by default */
+.chatbot-container iframe {
+    display: none;
+}
+
+/* Center specific chatbot image */
 #chatbot img[src*="best_pfp"] {
     max-width: 140px;
     margin: 0 auto;
     display: block;
 }
 
+/* Chatbot container visual style */
 #chatbot .chatbot-container {
     margin-top: 1.5rem;
-    padding: 1.5rem;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Divider strip */
 .section-divider {
     border: 0;
     height: 1px;
@@ -25,32 +35,63 @@
     margin: 1.5rem auto 2rem auto;
     background: linear-gradient(
         to right,
-        rgba(255,255,255,0),
-        rgba(255,255,255,0.35),
-        rgba(255,255,255,0)
+        rgba(255,230,200,0),
+        rgba(255,230,200,0.35),
+        rgba(255,230,200,0)
     );
 }
 
-/* Subtle rice-paper / fabric pass over the dark UI */
+/* =========================================================
+   BACKGROUND + TEXTURES
+   ========================================================= */
+
 #wrapper {
     background-image:
         url("../../images/overlay.png"),
         linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
-        /* url("../../images/bg.jpg"), */
         url("../../images/wuxia_texture.JPG");
     background-blend-mode: normal, multiply, normal, overlay;
 }
 
-/* Headings — slight brushstroke-texture fade */
+/* Floating ink texture overlay */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    pointer-events: none;
+    background: url("../../images/wuxia_ink.jpg") repeat;
+    opacity: 0.035;
+}
+
+/* Music visualizer */
+#music-visualizer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
+    opacity: 0.25;
+    z-index: 10;
+}
+
+/* =========================================================
+   TYPOGRAPHY — WUXIA HEADERS & BODY TEXT
+   ========================================================= */
+
+/* Brush-stroke style headings */
 #wrapper h1, 
 #wrapper h2, 
-#wrapper h3, 
+#wrapper h3,
 .post header.major h2,
 .post header.major h3,
 #intro h1,
 #intro h2,
-header h2,
-header h1 {
+header h1,
+header h2 {
     font-family: "KaiTi", "STKaiti", "SimSun", serif;
     letter-spacing: 1px;
     font-weight: 600;
@@ -63,23 +104,51 @@ header h1 {
     color: transparent;
 }
 
+/* Solid opaque text for Intro only */
+#intro h1,
+#intro h2,
+#intro p {
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    color: #ffffff !important;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+}
 
-/* Wuxia ink-panel look for sections */
+/* Wuxia body text */
+body,
+p,
+.post p,
+.posts article p,
+section p {
+    color: rgba(255, 235, 220, 0.92) !important;
+    font-size: 1.15rem !important;
+    line-height: 1.9 !important;
+    font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif !important;
+    letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   PANELS (Posts, Featured posts, Cards)
+   ========================================================= */
+
 .post,
 .posts article,
 .post.featured {
-    background: rgba(20, 20, 20, 0.55); /* translucent ink panel */
-    border: 1px solid rgba(255, 230, 200, 0.08); /* warm thin border */
+    background: rgba(20, 20, 20, 0.55);
+    border: 1px solid rgba(255, 230, 200, 0.08);
     border-radius: 8px;
 
     box-shadow:
         0 0 25px rgba(0, 0, 0, 0.5),
         inset 0 0 35px rgba(0, 0, 0, 0.45),
-        0 0 10px rgba(255, 200, 150, 0.15); /* faint lantern glow */
+        0 0 10px rgba(255, 200, 150, 0.15);
 
     backdrop-filter: blur(4px);
 
-    /* subtle rice paper texture */
     background-image:
         url("../images/wuxia_texture0.png"),
         linear-gradient(
@@ -100,68 +169,36 @@ header h1 {
     transition: 0.3s ease;
 }
 
-/* Soft lantern glow hover effect */
-a.button:hover,
-ul.actions.special li a:hover {
-    box-shadow: 0 0 12px rgba(255, 220, 160, 0.35),
-                0 0 20px rgba(255, 180, 120, 0.25);
+/* Fix padding on major headers */
+.post header.major {
+    padding-top: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 
-/* Divider compatible with wuxia theme */
-.section-divider {
-    background: linear-gradient(
-        to right,
-        rgba(255,230,200,0),
-        rgba(255,230,200,0.35),
-        rgba(255,230,200,0)
-    );
-}
+/* =========================================================
+   BUTTONS — Wuxia Gold Gradient Buttons
+   ========================================================= */
 
-/* Floating ink shadows */
-body::after {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    background: url("../../images/wuxia_ink.jpg") repeat;
-    opacity: 0.035;
-}
-
-#music-visualizer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    pointer-events: none;
-    opacity: 0.25;
-    z-index: 10;
-}
-
-/* Wuxia Body Text Override */
-body, p, section p, .post p, .posts article p {
-    color: rgba(255, 235, 220, 0.92) !important; /* soft warm white */
-    font-size: 1.15rem !important;               /* bigger text */
-    line-height: 1.9 !important;                 /* better readability */
-    font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif !important;
-    letter-spacing: 0.3px;
-}
-
-/* Wuxia Button Style Override */
 .button,
 .button.large,
-ul.actions.special li a.button {
+ul.actions.special li a.button,
+button,
+input[type="button"],
+input[type="submit"] {
     background: linear-gradient(145deg, #6b552e, #42351b) !important;
     border-color: rgba(255, 210, 120, 0.75) !important;
     color: rgba(255, 245, 230, 1) !important;
-
 
     padding: 0.75rem 2.25rem !important;
     border-radius: 6px;
     font-family: "Noto Serif SC", "KaiTi", serif !important;
     font-size: 1rem !important;
     letter-spacing: 0.5px;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
     box-shadow:
         0 0 12px rgba(0, 0, 0, 0.35),
@@ -171,14 +208,18 @@ ul.actions.special li a.button {
     transition: 0.3s ease;
 }
 
+/* Hover glow */
 .button:hover,
 ul.actions.special li a.button:hover {
     box-shadow:
         0 0 18px rgba(255, 200, 150, 0.35),
         inset 0 0 25px rgba(255, 200, 150, 0.25);
     transform: translateY(-3px);
-    color: rgba(255, 245, 230, 1) !important;
 }
+
+/* =========================================================
+   FOOTER STYLING
+   ========================================================= */
 
 #footer {
     background: rgba(20, 20, 20, 0.55) !important;
@@ -201,41 +242,4 @@ ul.actions.special li a.button:hover {
 
 #footer ul.icons.alt li .icon:before {
     box-shadow: inset 0 0 0 2px rgba(255, 230, 200, 0.25) !important;
-}
-
-.button,
-ul.actions.special li a.button,
-button,
-input[type="button"],
-input[type="submit"] {
-
-    height: auto !important;              /* remove forced height */
-    line-height: 1.4 !important;          /* use natural text height */
-    padding: 0.8rem 2rem !important;      /* consistent top/bottom padding */
-
-    display: inline-flex !important;      /* flexbox for centering */
-    align-items: center !important;       /* vertical centering */
-    justify-content: center !important;   /* horizontal centering */
-}
-
-/* Intro heading and description should be fully opaque */
-#intro h1,
-#intro h2,
-#intro p {
-    background-image: none !important;
-    -webkit-background-clip: border-box !important;
-    color: #ffffff !important; /* solid white */
-
-        /* Black outline effect */
-    text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000;
-}
-
-.post header.major {
-    padding-top: 2rem !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
 }
