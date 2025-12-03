@@ -237,3 +237,8 @@ input[type="submit"] {
          2px  2px 0 #000;
 }
 
+.post header.major {
+    padding-top: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
