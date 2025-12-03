@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Research — Ying Wong</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/custom.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
+
+            <!-- Intro -->
+            <div id="intro">
+                <h1>Research</h1>
+                <br />
+                <p>Robotics | Machine Learning | Computer Vision | Computational Cognitive Models</p>
+                <ul class="actions">
+                    <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly"></a></li>
+                </ul>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li><a href="hobbies.html">My Hobbies</a></li>
+                    <li class="active"><a href="research.html">Research</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/qywong03/" class="icon brands fa-linkedin"></a></li>
+                    <li><a href="https://github.com/wqying" class="icon brands fa-github"></a></li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main">
+
+                <!-- Featured Overview Section -->
+                <article class="post featured">
+                    <header class="major">
+                        <h2>Research Interests</h2>
+                        <p>A deep dive into my research combining cognitive science with AI & autonomous systems.</p>
+                    </header>
+                    <a class="image main">
+                        <img src="images/urop.png" alt="Research Hero Image" />
+                    </a>
+                </article>
+
+                <!-- --- SECTION 1: Project Overview --- -->
+                <section class="post">
+                    <header class="major">
+                        <h2>Overview</h2>
+                    </header>
+
+                    <p>
+                        The CuttleBot 2.0 Project: This research project combines reinforcement learning, computational modeling, 
+                        and cephalopod neuroscience to explore how episodic-like memory and adaptive 
+                        navigation strategies emerge in natural agents, and how they can be implemented 
+                        in autonomous systems.
+                    </p>
+
+                    <span class="image fit">
+                        <img src="images/Hypnosis.gif" alt="Overview Placeholder" />
+                    </span>
+
+                </section>
+
+                <!-- --- SECTION 2: My Role --- -->
+                <section class="post">
+                    <header class="major">
+                        <h2>My Role</h2>
+                    </header>
+
+                    <p>
+                        My primary contribution to the CuttleBot 2.0 project was the design and 
+                        development of the entire simulation pipeline used to model the neurorobot’s 
+                        episodic-like memory, foraging behavior, and reinforcement learning architecture. 
+                        I translated biological principles from cephalopod cognition into a computational 
+                        framework that could be tested, analyzed, and eventually deployed onto the physical 
+                        robot. My work sat at the intersection of cognitive science and AI/ML, focusing on 
+                        building systems that learn, adapt, and make context-sensitive decisions.
+                    </p>
+
+                    <ul>
+                        <li>Designed and implemented the full 16×16 grid-world simulation environment modeling prey, predators, and foraging regions.</li>
+                        <li>Built the Q-learning architecture and integrated it with a biologically inspired “what-where-when” episodic-like memory model.</li>
+                        <li>Developed the agent’s decision-making logic, action set, reward functions, hunger system, and softmax exploration policy.</li>
+                        <li>Implemented all five experimental scenarios and encoded environmental dynamics such as prey respawning and predator regions.</li>
+                        <li>Created behavioral metrics, data-logging tools, and visualization scripts to analyze learning, foraging rates, timing behavior, and risk-taking.</li>
+                        <li>Worked with the physical TurtleBot4 platform and contributed to robotics integration for future deployment.</li>
+                    </ul>
+                </section>
+
+                <!-- --- SECTION 3: Technical Summary --- -->
+                <section class="post">
+                    <header class="major">
+                        <h2>Technical Summary</h2>
+                    </header>
+
+                    <p>
+                        The computational architecture of the CuttleBot simulation was designed to mirror 
+                        the cognitive and behavioral principles observed in biological cuttlefish. At its core, 
+                        the agent integrates three components: an episodic-like memory system, a 
+                        reinforcement-learning engine, and an abstracted grid-world environment that 
+                        reproduces ecological foraging conditions.
+                    </p>
+
+                    <p>
+                        The episodic-like memory module encodes the <strong>what-where-when</strong> of each 
+                        encounter—prey type, spatial location, and time step—storing these as structured 
+                        memory traces that dynamically inform action selection. These traces shape the 
+                        agent’s understanding of reward distribution, predator risk, and temporal patterns in 
+                        prey availability.
+                    </p>
+
+                    <p>
+                        Decision-making is governed by a <strong>Q-learning algorithm</strong> built around a 
+                        high-dimensional state space including position, heading direction, hunger level, and 
+                        temporal context. The agent selects actions through a softmax policy that balances 
+                        exploration and exploitation. Rewards for capturing prey, penalties for predator 
+                        encounters, and hunger-based modifiers enable the emergence of selective, 
+                        opportunistic, and risky foraging behaviors.
+                    </p>
+
+                    <span class="image fit">
+                        <img src="images/attack.png" alt="Architecture Diagram Placeholder" />
+                    </span>
+
+                    <p>
+                        As the project progresses toward real-world deployment, I also worked extensively 
+                        with the <strong>TurtleBot4 hardware</strong> to prepare the platform for physical integration. 
+                        This involved troubleshooting driver and sensor configuration issues and implementing 
+                        the foundational robotics software stack using <strong>ROS2</strong>. I configured 
+                        <strong>SLAM</strong> for environment mapping, <strong>Nav2</strong> for path planning and behavior 
+                        tree-based navigation, and tested autonomous movement using LiDAR-based 
+                        localization. These components will allow the neurorobot to eventually perform 
+                        real-time foraging behaviors in a physical environment that reflects the simulation 
+                        conditions.
+                    </p>
+                </section>
+
+                <!-- --- SECTION 4: Simulation & Results --- -->
+                <section class="post">
+                <header class="major">
+                    <h2>Simulation Results</h2>
+                </header>
+
+                <p>
+                    The simulation provided a controlled environment to evaluate how episodic-like 
+                    memory and reinforcement learning shape foraging strategies across five 
+                    ecologically inspired scenarios. Over 30 independent 12,000-timestep runs, the 
+                    agent demonstrated context-sensitive behavior that aligned with the cognitive 
+                    patterns observed in biological cuttlefish.
+                </p>
+
+                <p>
+                    Key findings included strong selective foraging when desirable prey was abundant, 
+                    opportunistic foraging when shrimp was removed, reduced risky foraging in 
+                    predator-dense areas, and evidence of temporal learning during periodic prey 
+                    replenishment. The agent’s hunger-modulated decision cycles closely matched 
+                    expected motivational patterns, and cumulative reward curves showed gradual 
+                    improvement in decision efficiency over time.
+                </p>
+
+                <span class="image fit">
+                    <img src="images/sim.png" alt="Simulation GIF Placeholder" />
+                </span>
+
+                <p>
+                    Together, these results support the hypothesis that episodic-like memory 
+                    meaningfully contributes to adaptive behavior. The simulation validated the 
+                    underlying cognitive architecture and provides a strong foundation for implementing 
+                    the same decision-making system on the physical neurorobot.
+                </p>
+
+                <span class="image fit">
+                    <img src="images/cam.png" alt="Graph Placeholder" />
+                </span>
+            </section>
+
+
+                <!-- --- SECTION 5: Publications, Posters, Talks --- -->
+                <section class="post">
+                    <header class="major">
+                        <h2>Presentations and Pre-print</h2>
+                    </header>
+
+                    <p>This project was rewarded a $3000 grant from UROP and Calit2 and I presented at UCI UROP Symposium 2025, UCI Cognitive Science Department Honors Symposium</p>
+                    <p>I co-authored the paper "Episodic-Like Memory in a Simulation of Cuttlefish Behavior", which focuses on the computational model aspect of the CuttleBot 2.0 project.
+                        It is available on BioRxiv and is under review for journal publication.</p>
+
+                    <ul class="actions special">
+                        <li><a href="https://www.biorxiv.org/content/10.1101/2025.09.03.674043v1" class="button">View pre-print</a></li>
+                    </ul>
+
+                </section>
+
+                <!-- --- SECTION 6: GitHub + Code --- -->
+                <section class="post">
+                    <header class="major">
+                        <h2>Code Repositories</h2>
+                    </header>
+
+                    <p>Code for the computational model available on GitHub.</p>
+
+                    <ul class="actions special">
+                        <li><a href="https://github.com/jkrichma/EpisodicLikeMemoryModel" class="button">GitHub Repo</a></li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <section class="split contact"></section>
+
+                <section>
+                    <h3>Email</h3>
+                    <p>qianyingwong@gmail.com</p>
+                </section>
+
+                <section>
+                    <h3>Phone</h3>
+                    <p>(949) 316-8073</p>
+                </section>
+
+                <section>
+                    <h3>Socials</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/qywong03/" class="icon brands alt fa-linkedin"></a></li>
+                        <li><a href="https://github.com/wqying" class="icon brands alt fa-github"></a></li>
+                    </ul>
+                </section>
+
+            </footer>
+
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul><li>Design inspired by HTML5 UP. Made by Ying Wong.</li></ul>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <!-- Global Music Visualizer -->
+        <canvas id="music-visualizer"></canvas>
+        <script src="assets/js/visualizer.js"></script>
+
+    </body>
+</html>

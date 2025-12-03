@@ -4,13 +4,10 @@
     background-color: transparent !important;
 }
 
-
-
-.image.main img[src*="best_pfp"] {
-    max-width: 150px;  /* Adjust this value to your preferred width */
-    height: auto;      /* Maintains aspect ratio */
-    margin: 0 auto;    /* Centers the image */
-    display: block;    /* Ensures proper margin centering */
+#chatbot img[src*="best_pfp"] {
+    max-width: 140px;
+    margin: 0 auto;
+    display: block;
 }
 
 #chatbot .chatbot-container {
