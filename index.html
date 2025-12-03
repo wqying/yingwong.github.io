@@ -9,7 +9,11 @@
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="is-preload">
+		<!-- Global Music Visualizer -->
+		<canvas id="music-visualizer"></canvas>
+		<script src="assets/js/visualizer.js"></script>
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
@@ -20,7 +24,7 @@
 						<br />
 						<p>Artifical Intelligence | Software Engineering | Cognitive Science<br />
 						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly"></a></li>
 						</ul>
 					</div>
 
@@ -32,7 +36,8 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">ying wong</a></li>
+							<li class="active"><a href="index.html">Portfolio</a></li>
+							<li><a href="hobbies.html">my hobbies</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/qywong03/" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
@@ -46,9 +51,9 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<h2><a href="#">who i am</a></h2>
+									<h2>who i am</h2>
 									<p>Aspiring AI Engineer with software engineering skills and a cognitive science background.</p>
-									<p>Call me Bob the Builder the way I be building :P</p>
+									<!-- <p>Call me Bob the Builder the way I be building :P</p> -->
 								</header>
 								<a href="#" class="image main"><img src="images/best_pfp.JPG" alt="" /></a>
 								<ul class="actions special">
@@ -56,77 +61,85 @@
 								</ul>
 							</article>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="#">Sed magna<br />
-										ipsum faucibus</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="#">Primis eget<br />
-										imperdiet lorem</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="#">Ante mattis<br />
-										interdum dolor</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="#">Tempus sed<br />
-										nulla imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="#">Odio magna<br />
-										sed consectetur</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
-					</div>
+						<!-- Chatbot Section -->
+							<section id="chatbot" class="post">
+								<header class="major">
+									<h2>AI Chatbot — Ask Ying</h2>
+									<p>Talk to an AI version of me! This chatbot knows about my background, projects, and experiences.</p>
+								</header>
 
+								<!-- Placeholder thumbnail or banner image -->
+								<span class="image fit">
+									<img src="images/project_chatbot_placeholder.jpg" alt="AI Chatbot Thumbnail" />
+								</span>
+
+								<!-- Placeholder for future Gradio embed -->
+								<div class="chatbot-container">
+									<p style="opacity:0.7;">The interactive chatbot will appear here.</p>
+									<!-- Example embed when ready:
+									<iframe src="https://your-gradio-endpoint" width="100%" height="600px"></iframe>
+									-->
+								</div>
+
+								<ul class="actions special">
+									<li><a href="#" class="button">Launch Chatbot</a></li>
+								</ul>
+							</section>
+
+						<!-- Posts -->
+							<section id="projects" class="posts">
+
+								<!-- Project 1: Research Papers + Robot -->
+								<article>
+									<header>
+										<h2><a href="#">Research: Reinforcement Learning & Cognitive Robotics</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/project_research_placeholder.jpg" alt="Research Project Thumbnail" /></a>
+									<p>My honors research on cephalopod-inspired neurorobots. 
+									Includes the github to a co-developed computational cognitive model and the physical robot demonstrations.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/wqying" class="button">Research GitHub</a></li>
+									</ul>
+								</article>
+
+								<!-- Project 2: Flappy Petr -->
+								<article>
+									<header>
+										<h2><a href="#">Flappy Petr</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/project_flappy_placeholder.gif" alt="Flappy Petr Thumbnail" /></a>
+									<p>A chaotic, fast-paced Flappy Bird–style game created in Unity.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Play on itch.io</a></li>
+									</ul>
+								</article>
+
+								<!-- Project 3: One Boss Left -->
+								<article>
+									<header>
+										<h2><a href="#">One Boss Left</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/project_oneboss_placeholder.png" alt="One Boss Left Thumbnail" /></a>
+									<p>An action boss-fight game with hand-drawn assets and original combat design.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Play on itch.io</a></li>
+									</ul>
+								</article>
+
+								<!-- Project 4: Vestige -->
+								<article>
+									<header>
+										<h2><a href="#">Vestige</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/project_vestige_placeholder.gif" alt="Vestige Thumbnail" /></a>
+									<p>A narrative exploration game focused on element manipulation and visual storytelling.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Play on itch.io</a></li>
+									</ul>
+								</article>
+
+							</section>
+						</div>
 				<!-- Footer -->
 					<footer id="footer">
 						<section class="split contact">

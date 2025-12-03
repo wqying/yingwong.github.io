@@ -1,6 +1,239 @@
+/* overide */
+/* Remove the big white sheet behind everything */
+#main {
+    background-color: transparent !important;
+}
+
+
+
 .image.main img[src*="best_pfp"] {
     max-width: 150px;  /* Adjust this value to your preferred width */
     height: auto;      /* Maintains aspect ratio */
     margin: 0 auto;    /* Centers the image */
     display: block;    /* Ensures proper margin centering */
 }
+
+#chatbot .chatbot-container {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    width: 60%;
+    margin: 1.5rem auto 2rem auto;
+    background: linear-gradient(
+        to right,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.35),
+        rgba(255,255,255,0)
+    );
+}
+
+/* Subtle rice-paper / fabric pass over the dark UI */
+#wrapper {
+    background-image:
+        url("../../images/overlay.png"),
+        linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+        /* url("../../images/bg.jpg"), */
+        url("../../images/wuxia_texture.JPG");
+    background-blend-mode: normal, multiply, normal, overlay;
+}
+
+/* Headings — slight brushstroke-texture fade */
+#wrapper h1, 
+#wrapper h2, 
+#wrapper h3, 
+.post header.major h2,
+.post header.major h3,
+#intro h1,
+#intro h2,
+header h2,
+header h1 {
+    font-family: "KaiTi", "STKaiti", "SimSun", serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background-image: linear-gradient(
+        to right,
+        rgba(255,230,200,0.9),
+        rgba(255,230,200,0.6)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* Wuxia ink-panel look for sections */
+.post,
+.posts article,
+.post.featured {
+    background: rgba(20, 20, 20, 0.55); /* translucent ink panel */
+    border: 1px solid rgba(255, 230, 200, 0.08); /* warm thin border */
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 25px rgba(0, 0, 0, 0.5),
+        inset 0 0 35px rgba(0, 0, 0, 0.45),
+        0 0 10px rgba(255, 200, 150, 0.15); /* faint lantern glow */
+
+    backdrop-filter: blur(4px);
+
+    /* subtle rice paper texture */
+    background-image:
+        url("../images/wuxia_texture0.png"),
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.55)
+        );
+    background-blend-mode: overlay, normal;
+}
+
+.post:hover,
+.posts article:hover,
+.post.featured:hover {
+    box-shadow:
+        0 0 35px rgba(255, 200, 150, 0.25),
+        inset 0 0 40px rgba(255, 200, 150, 0.12);
+    transform: translateY(-3px);
+    transition: 0.3s ease;
+}
+
+/* Soft lantern glow hover effect */
+a.button:hover,
+ul.actions.special li a:hover {
+    box-shadow: 0 0 12px rgba(255, 220, 160, 0.35),
+                0 0 20px rgba(255, 180, 120, 0.25);
+}
+
+/* Divider compatible with wuxia theme */
+.section-divider {
+    background: linear-gradient(
+        to right,
+        rgba(255,230,200,0),
+        rgba(255,230,200,0.35),
+        rgba(255,230,200,0)
+    );
+}
+
+/* Floating ink shadows */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    background: url("../../images/wuxia_ink.jpg") repeat;
+    opacity: 0.035;
+}
+
+#music-visualizer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
+    opacity: 0.25;
+    z-index: 10;
+}
+
+/* Wuxia Body Text Override */
+body, p, section p, .post p, .posts article p {
+    color: rgba(255, 235, 220, 0.92) !important; /* soft warm white */
+    font-size: 1.15rem !important;               /* bigger text */
+    line-height: 1.9 !important;                 /* better readability */
+    font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif !important;
+    letter-spacing: 0.3px;
+}
+
+/* Wuxia Button Style Override */
+.button,
+.button.large,
+ul.actions.special li a.button {
+    background: linear-gradient(145deg, #6b552e, #42351b) !important;
+    border-color: rgba(255, 210, 120, 0.75) !important;
+    color: rgba(255, 245, 230, 1) !important;
+
+
+    padding: 0.75rem 2.25rem !important;
+    border-radius: 6px;
+    font-family: "Noto Serif SC", "KaiTi", serif !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 0 12px rgba(0, 0, 0, 0.35),
+        inset 0 0 18px rgba(0, 0, 0, 0.45),
+        0 0 10px rgba(255, 200, 150, 0.15);
+
+    transition: 0.3s ease;
+}
+
+.button:hover,
+ul.actions.special li a.button:hover {
+    box-shadow:
+        0 0 18px rgba(255, 200, 150, 0.35),
+        inset 0 0 25px rgba(255, 200, 150, 0.25);
+    transform: translateY(-3px);
+    color: rgba(255, 245, 230, 1) !important;
+}
+
+#footer {
+    background: rgba(20, 20, 20, 0.55) !important;
+    border: 1px solid rgba(255, 230, 200, 0.1) !important;
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+
+    box-shadow:
+        0 0 25px rgba(0, 0, 0, 0.5),
+        inset 0 0 25px rgba(0, 0, 0, 0.45),
+        0 0 12px rgba(255, 200, 150, 0.15);
+}
+
+#footer h3,
+#footer p,
+#footer a {
+    color: rgba(255, 235, 220, 0.95) !important;
+    font-family: "Noto Serif SC", "KaiTi", serif;
+}
+
+#footer ul.icons.alt li .icon:before {
+    box-shadow: inset 0 0 0 2px rgba(255, 230, 200, 0.25) !important;
+}
+
+.button,
+ul.actions.special li a.button,
+button,
+input[type="button"],
+input[type="submit"] {
+
+    height: auto !important;              /* remove forced height */
+    line-height: 1.4 !important;          /* use natural text height */
+    padding: 0.8rem 2rem !important;      /* consistent top/bottom padding */
+
+    display: inline-flex !important;      /* flexbox for centering */
+    align-items: center !important;       /* vertical centering */
+    justify-content: center !important;   /* horizontal centering */
+}
+
+/* Intro heading and description should be fully opaque */
+#intro h1,
+#intro h2,
+#intro p {
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    color: #ffffff !important; /* solid white */
+
+        /* Black outline effect */
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+}
+
